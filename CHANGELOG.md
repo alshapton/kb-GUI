@@ -4,9 +4,9 @@
 :Copyright: © 2020, alshapton.
 :License: GPLv3 (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2020-12-28
-:Version: 0.1.0
+:Version: 0.0.1
 
 ## Version History
 
-0.1.0 
-    * Initial commit.
+0.0.1 
+    * Working copy.
