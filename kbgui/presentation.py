@@ -19,7 +19,11 @@ from kivy.uix.treeview import TreeView, TreeViewLabel
 def populate_categories(self,KB_DETAILS):
     # Construct treeview for the current knowledgebase
     # Change the Root node to contain the name of the knowledgebase
-    cats = list_categories(DEFAULT_CONFIG,KB_DETAILS)
+    try:
+        cats = list_categories(DEFAULT_CONFIG,KB_DETAILS)
+    except ConnectionError:
+        print("Server Unavailable")
+        pass
     self.title = construct_kb_title(KB_DETAILS, get_current_base(BASE))
     #self.root.ids.tv.root.text = "kb - " + KB_DETAILS['location'] + ":" + get_current_base(BASE) 
     self.root.ids.tv.root.text = self.title
