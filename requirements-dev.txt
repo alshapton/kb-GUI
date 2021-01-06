@@ -4,4 +4,4 @@ coverage
 flake8
 pyinstaller
 pytest
-pytest-cov
+pytest-cov==2.10.1
