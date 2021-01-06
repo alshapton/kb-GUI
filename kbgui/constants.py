@@ -15,5 +15,3 @@ __all__ = ()
 
 # API Version
 GUI_VERSION = "0.1.0"
-
-}
