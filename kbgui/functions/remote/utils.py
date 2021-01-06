@@ -1,8 +1,19 @@
+# -*- encoding: utf-8 -*-
+# kb-gui v0.1.0
+# A GUI for "kb" - a knowledge base organizer
+# Copyright © 2020, alshapton.
+# See /LICENSE for licensing information.
 
+"""
+kb-GUI utilities module (specifically for remote kb's)
+:Copyright: © 2020, alshapton.
+:License: GPLv3 (see /LICENSE).
+"""
 import json
 import requests
 from requests.auth import HTTPBasicAuth
 from functions.remote.exceptions import *
+
 
 def jsonParameters(parameters):
     """
@@ -29,7 +40,7 @@ def jsonParameters(parameters):
         return parms[:-1]
 
 
-def makeRequest(requestUrl, timeOut=1, parameters=''):
+def makeRequest(requestUrl, user:str, pwd:str, timeOut=1, parameters=''):
 
     """
     :param requestUrl: str
@@ -59,9 +70,9 @@ def makeRequest(requestUrl, timeOut=1, parameters=''):
         url_response = requests.get(url=str(requestUrl)
                                     + jsonParameters(parameters),
                                     timeout=timeOut,
-                                    auth=('kbuser', 'kbuser'))
+                                    auth=(user,pwd))
     except requests.exceptions.ReadTimeout:
         raise KBAPIReadTimeOut('Timeout Error')
     else:
         response = url_response.json()
-    return response
+    return response 
