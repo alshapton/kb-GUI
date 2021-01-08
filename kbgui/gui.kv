@@ -1,0 +1,28 @@
+#:kivy 2.0
+#:import TreeView kivy.uix.treeview
+#:import TreeViewLabel kivy.uix.treeview.TreeViewLabel
+#:import TreeViewNode kivy.uix.treeview.TreeViewNode
+<Label>
+    font_size: 32
+    color: [0, 0,0, 1]
+    
+Screen:
+    BoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title: 'kbGUI'
+            left_action_items: [['menu',lambda x : app.left_menu_click()]]
+            right_action_items: [['dots-vertical',lambda x : app.right_menu_click()]]
+
+        BoxLayout:
+            orientation: 'horizontal'
+            TreeView:
+                id: tv
+                root_options: { 'text': 'kb - <None>', 'font_size': 32}
+                hide_root: False
+                indent_level: 4
+                size_hint_y: 1  
+                height: self.parent.height*2
+            MDLabel:
+                text: 'item area'
+            
