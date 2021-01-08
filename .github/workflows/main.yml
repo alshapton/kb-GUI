@@ -12,12 +12,13 @@ on:
   
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+       
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-18.04]
         python-version: [3.6, 3.7, 3.8, 3.9]
-
+        
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -36,8 +37,8 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         codespell . --skip="*.drawio,./.git,*postman*" --ignore-words-list=hist --quiet-level=2
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-    - name: Test with pytest
-      if: github.ref != 'refs/remotes/origin/main'
-      run: |
-        pytest
+    #- name: Test with pytest
+    #  if: github.ref != 'refs/remotes/origin/main'
+    #  run: |
+    #    pytest
 
