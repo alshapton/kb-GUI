@@ -1,6 +1,6 @@
 kb-manager
 attr
-attrs
+attrs==20.3.0
 toml
 flask
 flask-httpauth==4.2.0
