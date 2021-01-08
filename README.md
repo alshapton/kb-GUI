@@ -1,5 +1,9 @@
 <p align="center">
     <img src="./img/kbGUIlogo.png?raw=true" width="200"/>
+
+Dev: ![KB-GUI](https://github.com/alshapton/kb-gui/workflows/KB-GUI/badge.svg?branch=develop)
+Main: ![KB-GUI](https://github.com/alshapton/kb-gui/workflows/KB-GUI/badge.svg?branch=main)
+
 </p>
 
 # kbGUI 
