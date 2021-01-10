@@ -11,17 +11,12 @@ kb-GUI main module
 """
 
 #kivy.require("2.0.0")
-import os
+
 
 from kivymd.app import MDApp
-from kivy.lang.builder import Builder
-from kivy.uix.treeview import TreeView, TreeViewLabel
-from kivy.uix.boxlayout import BoxLayout
-from kb.config import get_current_base, DEFAULT_CONFIG,BASE
-from functions.list import list_categories
+from kb.config import BASE, get_current_base
 from pathlib import Path
-
-from presentation import populate_categories, construct_kb_title
+from presentation import populate_categories, construct_kb_title, show_base_list,show_right_menu
 
 class gui(MDApp):
 
@@ -29,11 +24,16 @@ class gui(MDApp):
 
         # Change the application icon
         self.icon=str(Path("../img/","kb-icon.png")) 
-        self.title = construct_kb_title(KB_DETAILS, get_current_base(BASE))
+
+        # Get the list of knowledge bases available
+        show_base_list(self,KB_DETAILS)
 
         # Get the list of categories from the knowledgebase
         populate_categories(self,KB_DETAILS)
 
+        # Change the title of the window and the root node of the treeview
+        self.title = construct_kb_title(KB_DETAILS, get_current_base(BASE))
+        
         pass
 
     def left_menu_click(self):  
@@ -41,9 +41,10 @@ class gui(MDApp):
 
     def right_menu_click(self):  
         print("right menu")
+        show_right_menu(self)
 
 KB_DETAILS = dict(
-    location = 'remote',
+    location = 'local',
     server = 'http://localhost:5000',
     user = 'kbuser',
     pwd = 'kbuser'

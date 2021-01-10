@@ -17,6 +17,8 @@ At present it can connect to local knowledge bases on  the computer on which it 
 
 In future, it will  also allow connections to remote kbAPI servers.
 
+You can contribute to the development of kbGUI by joining our [community](https://github.com/alshapton/kb-gui/discussions).s
+
 ## DOCKER container
 
 kbGUI is also available as a DOCKER container. To construct the image, use:`docker-compose -f docker-compose.yml build  --force-rm`

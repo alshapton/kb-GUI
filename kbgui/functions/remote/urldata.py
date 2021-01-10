@@ -15,8 +15,10 @@ class Domain(object):
     base = protocol + "://" + host + ":" + port + "/"
 
 
-    """ Declaration of the endpoints
+    # Declaration of the endpoints
 
-        Categories  """
-        
-    categories = "categories"
+    # Categories    
+    list_categories = "categories"
+
+    #   Bases
+    list_bases = "base/list"

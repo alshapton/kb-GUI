@@ -11,9 +11,7 @@ kb-GUI utilities module (specifically for remote kb's)
 """
 import json
 import requests
-from requests.auth import HTTPBasicAuth
-from functions.remote.exceptions import *
-
+import requests.exceptions as re
 
 def jsonParameters(parameters):
     """
@@ -71,8 +69,8 @@ def makeRequest(requestUrl, user:str, pwd:str, timeOut=1, parameters=''):
                                     + jsonParameters(parameters),
                                     timeout=timeOut,
                                     auth=(user,pwd))
-    except requests.exceptions.ReadTimeout:
-        raise KBAPIReadTimeOut('Timeout Error')
+    except (re.ConnectionError,requests.exceptions.ReadTimeout):
+        raise re.ConnectionError    
     else:
         response = url_response.json()
     return response 
