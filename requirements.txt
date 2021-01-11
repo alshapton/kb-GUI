@@ -1,7 +1,4 @@
-kb-manager
-attr==0.3.1
-attrs==20.3.0
-toml==0.10.2
-flask
-flask-httpauth==4.2.0
-MarkupSafe==1.1.1
+kb-manager==0.1.5
+kivymd==0.104.1
+Kivy==2.0.0
+requests==2.25.1

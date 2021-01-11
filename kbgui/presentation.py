@@ -14,19 +14,14 @@ from typing import Dict
 
 from kb.config import get_current_base, DEFAULT_CONFIG,BASE
 from functions.list import list_bases, list_categories
-from kivy.uix.treeview import TreeView, TreeViewLabel
+from kivy.uix.treeview import TreeViewLabel
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.list import OneLineListItem
 from kivy.lang.builder import Builder
 from kivy.uix.popup import Popup
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.floatlayout import FloatLayout
-
-
 
 from kivymd.uix.dialog import MDDialog
-from kivy.uix.scrollview import  ScrollView 
 
 
 Builder.load_string('''
