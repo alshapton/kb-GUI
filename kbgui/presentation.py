@@ -34,7 +34,7 @@ Builder.load_string('''
         orientation: 'vertical'
         canvas.before:
             Color: 
-                rgba:66/255,148/255,243/255,1
+                rgba:72/255,105/255,141/255,1
             Rectangle:
                 pos: self.pos
                 size: self.size

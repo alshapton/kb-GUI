@@ -13,7 +13,8 @@ Screen:
             title: 'kbGUI'
             left_action_items: [['menu',lambda x : app.left_menu_click()]]
             right_action_items: [['dots-vertical',lambda x : app.right_menu_click()]]
-
+            md_bg_color: 72/255,105/255,141/255,1
+             
         BoxLayout:
             orientation: 'horizontal'
             TreeView:
@@ -23,6 +24,8 @@ Screen:
                 indent_level: 4
                 size_hint_y: 1  
                 height: self.parent.height*2
-            MDLabel:
-                text: ''
-            
+            Splitter:
+                sizeable_from: 'left'
+                MDLabel:
+                    text: ''
+                
