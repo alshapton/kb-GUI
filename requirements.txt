@@ -1,3 +1,7 @@
+kb-manager
+attr
+attrs==20.3.0
+toml
 kb-manager==0.1.5
 kivymd==0.104.1
 Kivy==2.0.0
