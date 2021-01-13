@@ -2,6 +2,7 @@ kb-manager
 attr
 attrs==20.3.0
 toml
-flask
-flask-httpauth==4.2.0
-MarkupSafe
+kb-manager==0.1.5
+kivymd==0.104.1
+Kivy==2.0.0
+requests==2.25.1

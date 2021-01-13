@@ -1,5 +1,9 @@
 <p align="center">
     <img src="./img/kbGUIlogo.png?raw=true" width="200"/>
+
+Dev: ![KB-GUI](https://github.com/alshapton/kb-gui/workflows/KB-GUI/badge.svg?branch=develop)
+Main: ![KB-GUI](https://github.com/alshapton/kb-gui/workflows/KB-GUI/badge.svg?branch=main)
+
 </p>
 
 # kbGUI 
@@ -12,6 +16,8 @@ kbGUI is a Graphical User Interface (GUI) for the kb - a minimalist knowledge ba
 At present it can connect to local knowledge bases on  the computer on which it is installed.
 
 In future, it will  also allow connections to remote kbAPI servers.
+
+You can contribute to the development of kbGUI by joining our [community](https://github.com/alshapton/kb-gui/discussions).s
 
 ## DOCKER container
 
