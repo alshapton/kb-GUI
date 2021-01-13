@@ -1,7 +1,4 @@
 kb-manager
-attr
-attrs
-toml
-flask
-flask-httpauth==4.2.0
-MarkupSafe
+kivymd==0.104.1
+Kivy==2.0.0
+requests==2.25.1
